@@ -52,6 +52,20 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+				<groupId>com.microsoft.azure</groupId>
+				<artifactId>azure-webapp-maven-plugin</artifactId>
+				<version>2.13.0</version>
+				<configuration>
+					<javaVersion>17</javaVersion>
+					<javaWebContainer>tomcat 10.1</javaWebContainer>
+					<authentication>
+						<serverId>032c43db-87c8-44b6-b8aa-b2f15d441967</serverId>
+					</authentication>
+					<appName>lrp-helloworld-test</appName>
+					<resourceGroup>test-resource-group</resourceGroup>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
